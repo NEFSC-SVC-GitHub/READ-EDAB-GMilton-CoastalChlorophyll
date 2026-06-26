@@ -17,7 +17,7 @@ bottle = pd.read_excel('bottle_data.xlsx')
 bottle=bottle.rename(columns={'yr':'year','sta_std':'station_std','chl_a':'chl'})
 bottle['datetime']= pd.to_datetime(bottle[['year', 'month', 'day']]) #create datetime from time elements
 bottle = bottle[bottle['chl_qcf'] != 1] #remove rows where control flag states bad chl
-bottle['depth'] = bottle['pressure'] * 1.02 #convert pressure to depth 
+bottle['depth'] = bottle['pressure'] / 1.02 #convert pressure to depth 
 bottle['HPLC'] = 1 #HPLC not used according to dataset 
 #triplicate flag
 counts_series = bottle[['depth','datetime','lat','lon']].value_counts() #count how many unique depth, datetime, lat, and lons there are
@@ -48,7 +48,7 @@ nuts_chl['hour'] = [int(t[:2]) for t in nuts_chl['time']] #pull specific time el
 nuts_chl['minute'] = [int(t[2:4]) for t in nuts_chl['time']]
 nuts_chl['datetime']= pd.to_datetime(nuts_chl[['year', 'month', 'day', 'hour','minute']]) #create datetime variable
 nuts_chl['HPLC']=1 #no HPLC according to website
-nuts_chl['depth'] = nuts_chl['press'] * 1.02 #convert pressure to depth 
+nuts_chl['depth'] = nuts_chl['press'] / 1.02 #convert pressure to depth 
 #triplicate flag
 counts_series = nuts_chl[['depth','datetime','lat','lon']].value_counts()
 counts_df = counts_series.reset_index(name='freq_uniq')

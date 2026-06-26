@@ -88,7 +88,7 @@ for file in f_list: #for every file in the folder
         kahe['lon']=dm_to_decimal_degrees(158, 16.4)*-1
         kahe=kahe[kahe['chl']!=-9] #remove -9 i.e. bad chl values
         kahe['station']='kahe' #name of station 
-        kahe['depth'] = kahe['press'] * 1.02 #convert to depth
+        kahe['depth'] = kahe['press'] / 1.02 #convert to depth by dividing pressure by 1.02 based on standard ocean salinity density
         kahe=kahe[['crn', 'depth', 'chl','hplc', 'datetime', 'lat', 'lon', 'station']]
         
     elif dfs.stn[0]==2: #station 2 = station Aloha
@@ -97,7 +97,7 @@ for file in f_list: #for every file in the folder
         aloha['lon']=dm_to_decimal_degrees(158, 00.0)*-1
         #don't remove -9 from chl for aloha station because some bad chl entries still have chl_hplc values. 
         aloha['station']='aloha'
-        aloha['depth'] = aloha['press'] * 1.02
+        aloha['depth'] = aloha['press'] / 1.02
         aloha=aloha[['crn', 'depth', 'chl','hplc', 'datetime', 'lat', 'lon', 'station']]
 
     elif dfs.stn[0]==6: #station 6 = station kaena
@@ -106,7 +106,7 @@ for file in f_list: #for every file in the folder
         kaena['lon']=dm_to_decimal_degrees(158, 7.9)*-1
         kaena=kaena[kaena['chl']!=-9] #remove -9 i.e. bad chl values
         kaena['station']='kaena'
-        kaena['depth'] = kaena['press'] * 1.02
+        kaena['depth'] = kaena['press'] / 1.02
         kaena=kaena[['crn', 'depth', 'chl','hplc', 'datetime', 'lat', 'lon', 'station']]
 
     elif dfs.stn[0]==8: #station 8 = station Hale
@@ -115,7 +115,7 @@ for file in f_list: #for every file in the folder
         hale['lon']=dm_to_decimal_degrees(158, 21.8)*-1
         hale=hale[hale['chl']!=-9] #remove -9 i.e. bad chl values
         hale['station']='hale'
-        hale['depth'] = hale['press'] * 1.02
+        hale['depth'] = hale['press'] / 1.02
         hale=hale[['crn', 'depth', 'chl','hplc', 'datetime', 'lat', 'lon', 'station']]
 
     elif dfs.stn[0]==50: #station 50 = station Ors
@@ -124,7 +124,7 @@ for file in f_list: #for every file in the folder
         ors['lon']=dm_to_decimal_degrees(157, 54.0)*-1
         ors=ors[ors['chl']!=-9] #remove -9 i.e. bad chl values
         ors['station']='ors'
-        ors['depth'] = ors['press'] * 1.02
+        ors['depth'] = ors['press'] / 1.02
         ors=ors[['crn', 'depth', 'chl','hplc', 'datetime', 'lat', 'lon', 'station']]
 
     elif dfs.stn[0]==52: #station 52 = station Whots
@@ -133,7 +133,7 @@ for file in f_list: #for every file in the folder
         whots['lon']=dm_to_decimal_degrees(157, 57.001)*-1
         whots=whots[whots['chl']!=-9] #remove -9 i.e. bad chl values
         whots['station']='whots'
-        whots['depth'] = whots['press'] * 1.02
+        whots['depth'] = whots['press'] / 1.02
         whots=whots[['crn', 'depth', 'chl','hplc', 'datetime', 'lat', 'lon', 'station']]
 
     else:
