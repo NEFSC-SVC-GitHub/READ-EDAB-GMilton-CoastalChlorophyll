@@ -22,7 +22,7 @@ bottle = pd.read_excel('bottle_data.xlsx')
 bottle=bottle.rename(columns={'yr':'year','sta_std':'station_std','chl_a':'chl'})
 bottle['datetime']= pd.to_datetime(bottle[['year', 'month', 'day']]) #datetime variable
 bottle = bottle[bottle['chl_qcf'] != 1] #remove rows where control flag states bad chl
-bottle['depth'] = bottle['pressure'] * 1.02 #convert pressure to depth 
+bottle['depth'] = bottle['pressure'] / 1.02 #convert pressure to depth 
 bottle['HPLC'] = 1 #no hplc
 #triplicate flag
 counts_series = bottle[['depth','datetime','lat','lon']].value_counts() #count how many unique depth, datetime, lat, and lons there are

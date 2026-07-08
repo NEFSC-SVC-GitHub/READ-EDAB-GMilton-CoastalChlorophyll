@@ -418,7 +418,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="final-variable-appending-and-organization">
 <h1>Final variable appending and organization<a class="headerlink" href="#final-variable-appending-and-organization" title="Link to this heading">#</a></h1>
-<p>Now, all needed variables (chl, cdom, and rrs) have been organized and standardized. For the final dataset, the chlorophyll dataset will be matched to the cdom and rrs and any coincidental matchups appended. This final dataset is therefore the same length as the chlorophyll one, but has more columns.</p>
+<p>Now, all needed variables (chl, cdom, and rrs) have been organized and standardized. For the final dataset, the chlorophyll dataset will be matched to the cdom and rrs and any coincidental matchups appended to the row. All values that are not coincidental need to be concatinated onto the dataframe as well.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -445,24 +445,103 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#load in all completed dataframes</span>
-<span class="n">chl</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Users\gianna.milton\Documents\Python\Coastal_chl_final\all_chl.xlsx&#39;</span><span class="p">)</span>
-<span class="n">cdom</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Users\gianna.milton\Documents\Python\Coastal_chl_final\all_cdom.xlsx&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#load in chlorophyll and cdom data and rename columns </span>
+<span class="n">chl</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Coastal_chl_final\all_chl.xlsx&#39;</span><span class="p">)</span>
+<span class="n">cdom</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Coastal_chl_final\all_cdom.xlsx&#39;</span><span class="p">)</span>
+<span class="n">chl</span> <span class="o">=</span> <span class="n">chl</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;chl&#39;</span><span class="p">:</span> <span class="s1">&#39;chlorophyll&#39;</span><span class="p">,</span> <span class="s1">&#39;chl_a&#39;</span><span class="p">:</span> <span class="s1">&#39;chlorophyll_HPLC&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#load in chlorophyll and cdom data and rename columns </span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">chl</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Coastal_chl_final\all_chl.xlsx&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">cdom</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Coastal_chl_final\all_cdom.xlsx&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">chl</span> <span class="o">=</span> <span class="n">chl</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;chl&#39;</span><span class="p">:</span> <span class="s1">&#39;chlorophyll&#39;</span><span class="p">,</span> <span class="s1">&#39;chl_a&#39;</span><span class="p">:</span> <span class="s1">&#39;chlorophyll_HPLC&#39;</span><span class="p">})</span>
+
+<span class="nn">File ~\AppData\Local\anaconda3\Lib\site-packages\pandas\io\excel\_base.py:495,</span> in <span class="ni">read_excel</span><span class="nt">(io, sheet_name, header, names, index_col, usecols, dtype, engine, converters, true_values, false_values, skiprows, nrows, na_values, keep_default_na, na_filter, verbose, parse_dates, date_parser, date_format, thousands, decimal, comment, skipfooter, storage_options, dtype_backend, engine_kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">493</span> <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">io</span><span class="p">,</span> <span class="n">ExcelFile</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">494</span>     <span class="n">should_close</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="ne">--&gt; </span><span class="mi">495</span>     <span class="n">io</span> <span class="o">=</span> <span class="n">ExcelFile</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">496</span>         <span class="n">io</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">497</span>         <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">498</span>         <span class="n">engine</span><span class="o">=</span><span class="n">engine</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">499</span>         <span class="n">engine_kwargs</span><span class="o">=</span><span class="n">engine_kwargs</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">500</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">501</span> <span class="k">elif</span> <span class="n">engine</span> <span class="ow">and</span> <span class="n">engine</span> <span class="o">!=</span> <span class="n">io</span><span class="o">.</span><span class="n">engine</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">502</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">503</span>         <span class="s2">&quot;Engine should not be specified when passing &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">504</span>         <span class="s2">&quot;an ExcelFile - ExcelFile already has the engine set&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">505</span>     <span class="p">)</span>
+
+<span class="nn">File ~\AppData\Local\anaconda3\Lib\site-packages\pandas\io\excel\_base.py:1550,</span> in <span class="ni">ExcelFile.__init__</span><span class="nt">(self, path_or_buffer, engine, storage_options, engine_kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1548</span>     <span class="n">ext</span> <span class="o">=</span> <span class="s2">&quot;xls&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1549</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1550</span>     <span class="n">ext</span> <span class="o">=</span> <span class="n">inspect_excel_format</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1551</span>         <span class="n">content_or_path</span><span class="o">=</span><span class="n">path_or_buffer</span><span class="p">,</span> <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span>
+<span class="g g-Whitespace">   </span><span class="mi">1552</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1553</span>     <span class="k">if</span> <span class="n">ext</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1554</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1555</span>             <span class="s2">&quot;Excel file format cannot be determined, you must specify &quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1556</span>             <span class="s2">&quot;an engine manually.&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1557</span>         <span class="p">)</span>
+
+<span class="nn">File ~\AppData\Local\anaconda3\Lib\site-packages\pandas\io\excel\_base.py:1402,</span> in <span class="ni">inspect_excel_format</span><span class="nt">(content_or_path, storage_options)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1399</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">content_or_path</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1400</span>     <span class="n">content_or_path</span> <span class="o">=</span> <span class="n">BytesIO</span><span class="p">(</span><span class="n">content_or_path</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1402</span> <span class="k">with</span> <span class="n">get_handle</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1403</span>     <span class="n">content_or_path</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">,</span> <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span> <span class="n">is_text</span><span class="o">=</span><span class="kc">False</span>
+<span class="g g-Whitespace">   </span><span class="mi">1404</span> <span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1405</span>     <span class="n">stream</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">handle</span>
+<span class="g g-Whitespace">   </span><span class="mi">1406</span>     <span class="n">stream</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="nn">File ~\AppData\Local\anaconda3\Lib\site-packages\pandas\io\common.py:882,</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">873</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">874</span>             <span class="n">handle</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">875</span>             <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">878</span>             <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">879</span>         <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">880</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">881</span>         <span class="c1"># Binary mode</span>
+<span class="ne">--&gt; </span><span class="mi">882</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">883</span>     <span class="n">handles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">handle</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">885</span> <span class="c1"># Convert BytesIO or file objects passed with an encoding</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;Coastal_chl_final\\all_chl.xlsx&#39;
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rrs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Users\gianna.milton\Documents\Python\Coastal_chl_final\all_rrs.xlsx&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#do an outer match, and any columns without chl or chl_a, remove and make their own dataframe. then rename columns and append </span>
+<span class="n">chl_cdom_pre</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">chl</span><span class="p">,</span> <span class="n">cdom</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;ID_code&#39;</span><span class="p">],</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1">#merge the twp dataframes on ID_code </span>
+<span class="n">chl_cdom1</span> <span class="o">=</span><span class="n">chl_cdom_pre</span><span class="p">[[</span><span class="s1">&#39;ID_code&#39;</span><span class="p">,</span> <span class="s1">&#39;datetime_x&#39;</span><span class="p">,</span> <span class="s1">&#39;lat_x&#39;</span><span class="p">,</span> <span class="s1">&#39;lon_x&#39;</span><span class="p">,</span> <span class="s1">&#39;chlorophyll&#39;</span><span class="p">,</span> <span class="s1">&#39;chlorophyll_HPLC&#39;</span><span class="p">,</span><span class="s1">&#39;cdom&#39;</span><span class="p">,</span> <span class="s1">&#39;depth_x&#39;</span><span class="p">,</span> <span class="s1">&#39;experiment_x&#39;</span><span class="p">,</span> <span class="s1">&#39;station_x&#39;</span><span class="p">,</span>
+                         <span class="s1">&#39;affiliations_x&#39;</span><span class="p">,</span> <span class="s1">&#39;investigators_x&#39;</span><span class="p">,</span><span class="s1">&#39;contact&#39;</span><span class="p">,</span> <span class="s1">&#39;cruise_x&#39;</span><span class="p">,</span> <span class="s1">&#39;DOI_url_x&#39;</span><span class="p">,</span> <span class="s1">&#39;HPLC&#39;</span><span class="p">,</span> <span class="s1">&#39;triplicate&#39;</span><span class="p">,</span> <span class="s1">&#39;data_type_flag&#39;</span><span class="p">,</span> <span class="s1">&#39;source_x&#39;</span><span class="p">,</span>
+                         <span class="s1">&#39;cast&#39;</span><span class="p">]]</span> <span class="c1">#retain all chl columns (with preffix _x) as well as cdom values</span>
+<span class="n">chl_cdom1</span> <span class="o">=</span> <span class="n">chl_cdom1</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chlorophyll&#39;</span><span class="p">,</span> <span class="s1">&#39;chlorophyll_HPLC&#39;</span><span class="p">],</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">)</span> <span class="c1">#only keep rows with chl. These are rows with chl and cdom </span>
+<span class="n">chl_cdom1</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">chl_cdom1</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;_x&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> 
+
+<span class="n">cdom_2</span> <span class="o">=</span> <span class="n">chl_cdom_pre</span><span class="p">[</span><span class="n">chl_cdom_pre</span><span class="p">[[</span><span class="s1">&#39;chlorophyll&#39;</span><span class="p">,</span> <span class="s1">&#39;chlorophyll_HPLC&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)]</span> <span class="c1">#find the rows that have no chlorophyll values, but do have cdom</span>
+<span class="n">cdom_2</span> <span class="o">=</span> <span class="n">cdom_2</span><span class="p">[[</span><span class="s1">&#39;ID_code&#39;</span><span class="p">,</span>  <span class="s1">&#39;datetime_y&#39;</span><span class="p">,</span> <span class="s1">&#39;lon_y&#39;</span><span class="p">,</span> <span class="s1">&#39;lat_y&#39;</span><span class="p">,</span><span class="s1">&#39;depth_y&#39;</span><span class="p">,</span> <span class="s1">&#39;cdom&#39;</span><span class="p">,</span> <span class="s1">&#39;DOI_url_y&#39;</span><span class="p">,</span> <span class="s1">&#39;affiliations_y&#39;</span><span class="p">,</span> <span class="s1">&#39;investigators_y&#39;</span><span class="p">,</span><span class="s1">&#39;experiment_y&#39;</span><span class="p">,</span> <span class="s1">&#39;cruise_y&#39;</span><span class="p">,</span> 
+           <span class="s1">&#39;station_y&#39;</span><span class="p">,</span> <span class="s1">&#39;source_y&#39;</span><span class="p">]]</span> <span class="c1">#subset to all the cdom columns (with preffix _y)</span>
+<span class="n">cdom_2</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">cdom_2</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;_y&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1">#now, append the dataframe with matching ids and the dataframe without matching ids together</span>
+<span class="n">chl_cdom_final</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">chl_cdom1</span><span class="p">,</span> <span class="n">cdom_2</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#RRS to chl and cdom dataset </span>
+<span class="n">rrs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Coastal_chl_final\all_rrs.xlsx&#39;</span><span class="p">)</span>
 <span class="n">rrs</span> <span class="o">=</span> <span class="n">rrs</span><span class="p">[</span><span class="n">rrs</span><span class="p">[</span><span class="s1">&#39;wavelength&#39;</span><span class="p">]</span> <span class="o">&lt;=</span><span class="mi">800</span><span class="p">]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1">#reduce to more realistic limit of wavelengths</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#first, turn rrs data long format so that there is 1 uinique id for each row / group of wavelengths</span>
+<span class="c1">#first, turn rrs data long format so that there is 1 uinique id for each row / group of wavelengths</span>
 <span class="k">def</span> <span class="nf">long_to_wide</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Transforms long format to wide format (rrs_###) without averaging duplicates,</span>
@@ -489,43 +568,55 @@ document.write(`
 </div>
 </div>
 </div>
-<p>For appending these variables, first they are reduced to just the variable and ID_column</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cdom_reduced</span> <span class="o">=</span> <span class="n">cdom</span><span class="p">[[</span><span class="s1">&#39;cdom&#39;</span><span class="p">,</span> <span class="s1">&#39;ID_code&#39;</span><span class="p">]]</span>
-<span class="n">rrs_cols</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">rrs_long</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">col</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;rrs_&#39;</span><span class="p">)]</span>
-<span class="n">rrs_reduced</span> <span class="o">=</span> <span class="n">rrs_long</span><span class="p">[</span><span class="n">rrs_cols</span><span class="o">+</span><span class="p">[</span><span class="s1">&#39;ID_code&#39;</span><span class="p">]]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rrs_columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">rrs_long</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">col</span><span class="p">)</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;rrs_&#39;</span><span class="p">)]</span> <span class="c1">#grab all rrs columns</span>
+
+<span class="n">chl_cdom_rrs_pre</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">chl_cdom_final</span><span class="p">,</span> <span class="n">rrs_long</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;ID_code&#39;</span><span class="p">],</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1">#merge the two dataframes on ID_Code</span>
+<span class="n">chl_cdom_rrs1</span> <span class="o">=</span><span class="n">chl_cdom_rrs_pre</span><span class="p">[[</span><span class="s1">&#39;ID_code&#39;</span><span class="p">,</span> <span class="s1">&#39;datetime_x&#39;</span><span class="p">,</span> <span class="s1">&#39;lat_x&#39;</span><span class="p">,</span> <span class="s1">&#39;lon_x&#39;</span><span class="p">,</span> <span class="s1">&#39;chlorophyll&#39;</span><span class="p">,</span> <span class="s1">&#39;chlorophyll_HPLC&#39;</span><span class="p">,</span> <span class="s1">&#39;cdom&#39;</span><span class="p">,</span><span class="s1">&#39;depth_x&#39;</span><span class="p">,</span> <span class="s1">&#39;experiment_x&#39;</span><span class="p">,</span> 
+                                 <span class="s1">&#39;station_x&#39;</span><span class="p">,</span> <span class="s1">&#39;affiliations_x&#39;</span><span class="p">,</span><span class="s1">&#39;investigators_x&#39;</span><span class="p">,</span> <span class="s1">&#39;contact_x&#39;</span><span class="p">,</span> <span class="s1">&#39;cruise_x&#39;</span><span class="p">,</span> <span class="s1">&#39;DOI_url_x&#39;</span><span class="p">,</span> <span class="s1">&#39;HPLC&#39;</span><span class="p">,</span><span class="s1">&#39;triplicate&#39;</span><span class="p">,</span>
+                                 <span class="s1">&#39;data_type_flag&#39;</span><span class="p">,</span> <span class="s1">&#39;source_x&#39;</span><span class="p">,</span> <span class="s1">&#39;cast&#39;</span><span class="p">]</span><span class="o">+</span><span class="n">rrs_columns</span><span class="p">]</span> <span class="c1">#subset to all chl+cdom columns plus rrs_columns</span>
+<span class="n">chl_cdom_rrs1</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1">#remove any empty columns</span>
+<span class="n">chl_cdom_rrs1</span> <span class="o">=</span> <span class="n">chl_cdom_rrs1</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chlorophyll&#39;</span><span class="p">,</span> <span class="s1">&#39;chlorophyll_HPLC&#39;</span><span class="p">,</span> <span class="s1">&#39;cdom&#39;</span><span class="p">],</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">)</span> <span class="c1">#remove rows without chl or cdom. This dataframe contains all coincidental variables </span>
+<span class="n">chl_cdom_rrs1</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">chl_cdom_rrs1</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;_x&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> 
+
+<span class="c1">#subset dataframe of only rrs values without coincidental values</span>
+<span class="n">rrs_2</span> <span class="o">=</span> <span class="n">chl_cdom_rrs_pre</span><span class="p">[</span><span class="n">chl_cdom_rrs_pre</span><span class="p">[[</span><span class="s1">&#39;chlorophyll&#39;</span><span class="p">,</span> <span class="s1">&#39;chlorophyll_HPLC&#39;</span><span class="p">,</span> <span class="s1">&#39;cdom&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)]</span> <span class="c1">#grab all columns without chl or cdom</span>
+<span class="n">rrs_2</span><span class="o">=</span><span class="n">rrs_2</span><span class="p">[[</span><span class="s1">&#39;ID_code&#39;</span><span class="p">,</span> <span class="s1">&#39;source_y&#39;</span><span class="p">,</span><span class="s1">&#39;datetime_y&#39;</span><span class="p">,</span> <span class="s1">&#39;lon_y&#39;</span><span class="p">,</span> <span class="s1">&#39;lat_y&#39;</span><span class="p">,</span> <span class="s1">&#39;depth_y&#39;</span><span class="p">,</span> <span class="s1">&#39;experiment_y&#39;</span><span class="p">,</span> <span class="s1">&#39;DOI_url_y&#39;</span><span class="p">,</span><span class="s1">&#39;affiliations_y&#39;</span><span class="p">,</span> <span class="s1">&#39;investigators_y&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;contact_y&#39;</span><span class="p">,</span> <span class="s1">&#39;cruise_y&#39;</span><span class="p">,</span><span class="s1">&#39;station_y&#39;</span><span class="p">]</span><span class="o">+</span><span class="n">rrs_columns</span><span class="p">]</span> <span class="c1">#subset columns to rrs columns (with preffix _y)</span>
+<span class="n">rrs_2</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">rrs_2</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;_y&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="c1">#concatinate the coincidental dataframe to the rrs dataframe that is not coincidental. </span>
+<span class="n">chl_cdom_rrs_final</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">chl_cdom_rrs1</span><span class="p">,</span> <span class="n">rrs_2</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\gianna.milton\AppData\Local\Temp\ipykernel_21380\2510421331.py:7: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  chl_cdom_rrs1.dropna(axis=1, how=&#39;all&#39;, inplace=True) #remove any empty columns
 </pre></div>
 </div>
 </div>
 </div>
-<p>Next, the are merged with chl based on the ID_code.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alldata_chl</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">chl</span><span class="p">,</span> <span class="n">cdom_reduced</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;ID_code&#39;</span><span class="p">],</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">alldata_chl</span> <span class="o">=</span> <span class="n">alldata_chl</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chl&#39;</span><span class="p">,</span> <span class="s1">&#39;chl_a&#39;</span><span class="p">],</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
-<span class="c1">#filtered_df = df_merged[df_merged[&#39;chl&#39;].notna() &amp; df_merged[&#39;cdom&#39;].notna()] </span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#reformat  column positions and datetime format</span>
+<span class="n">chl_cdom_rrs_final</span><span class="o">=</span><span class="n">chl_cdom_rrs_final</span><span class="p">[[</span><span class="s1">&#39;ID_code&#39;</span><span class="p">,</span><span class="s1">&#39;source&#39;</span><span class="p">,</span><span class="s1">&#39;experiment&#39;</span><span class="p">,</span> <span class="s1">&#39;affiliations&#39;</span><span class="p">,</span><span class="s1">&#39;investigators&#39;</span><span class="p">,</span> <span class="s1">&#39;contact&#39;</span><span class="p">,</span> <span class="s1">&#39;cruise&#39;</span><span class="p">,</span>  <span class="s1">&#39;DOI_url&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;datetime&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="s1">&#39;lon&#39;</span><span class="p">,</span><span class="s1">&#39;depth&#39;</span><span class="p">,</span><span class="s1">&#39;station&#39;</span><span class="p">,</span> <span class="s1">&#39;cast&#39;</span><span class="p">,</span> <span class="s1">&#39;chlorophyll&#39;</span><span class="p">,</span> <span class="s1">&#39;chlorophyll_HPLC&#39;</span><span class="p">,</span> <span class="s1">&#39;triplicate&#39;</span><span class="p">,</span><span class="s1">&#39;HPLC&#39;</span><span class="p">,</span><span class="s1">&#39;data_type_flag&#39;</span><span class="p">,</span> <span class="s1">&#39;cdom&#39;</span><span class="p">]</span><span class="o">+</span><span class="n">rrs_columns</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alldata_chl</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">alldata_chl</span><span class="p">,</span> <span class="n">rrs_reduced</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;ID_code&#39;</span><span class="p">],</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">alldata_chl</span> <span class="o">=</span> <span class="n">alldata_chl</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chl&#39;</span><span class="p">,</span> <span class="s1">&#39;chl_a&#39;</span><span class="p">],</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chl_cdom_rrs_final</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">chl_cdom_rrs_final</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#alldata_chl.to_excel(&#39;compiled_chl_variables.xlsx&#39;, index = False) #all chlorophyll data with coincidental rrs and cdom data</span>
-<span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;compiled_chl_variables.csv.gz&quot;</span>
-<span class="n">alldata_chl</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">compression</span><span class="o">=</span><span class="s1">&#39;gzip&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
+<p>And now you have a full dataset twith all coincidental and non-coincidental variables!</p>
 </section>
 
     <script type="text/x-thebe-config">

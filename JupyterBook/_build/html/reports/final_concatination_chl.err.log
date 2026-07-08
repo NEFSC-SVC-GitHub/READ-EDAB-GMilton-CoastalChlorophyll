@@ -39,6 +39,6 @@ Here is a preview of the cell contents:
 -------------------
 ["seabass = pd.read_excel(r'C:\\Users\\gianna.milton\\Documents\\Python\\Coastal_chl_final\\SB_chl_na.xlsx')", "seabass = seabass.rename(columns={'identifier_product_doi':'DOI_url','decision':'data_type_flag'})", '', '#remove repeated calcofi data', "sb_calc = CalCOFI[['datetime', 'lat', 'lon','depth']] #reduce to datetime, lat, lon, and depth for  matching"]
 ...
-["test2 = pd.merge(gloria_sb, seabass_test, on=['datetime', 'doi_url','lat', 'lon','chl'], how='right',indicator=True).reset_index(drop=True)", "seabass1 =  test2[test2['_merge'] != 'both'] #remove rows where _merge has both", "seabass1 = seabass1[['datetime', 'lat', 'lon', 'chl', 'chl_a', 'depth_y', 'experiment', 'data_type', 'station', 'affiliations', 'investigators', 'contact',", "      'source', 'cruise', 'DOI_url', 'HPLC', 'triplicate', 'data_type_flag']]", "seabass = seabass1.rename(columns={'depth_y':'depth'})"]
+['', "test2 = seabass_test.merge(gloria_sb[['datetime', 'depth','doi_url','lat', 'lon']], on=['datetime', 'depth','doi_url','lat', 'lon'], how='left', indicator=True) #all calcofi data with seabass indicator", "seabass1 =  test2[test2['_merge'] != 'both'] #remove rows where _merge has both", "seabass1 = seabass1[['datetime', 'lat', 'lon', 'chl', 'chl_a', 'depth_y', 'experiment', 'data_type', 'station', 'affiliations', 'investigators', 'contact',", "      'source', 'cruise', 'DOI_url', 'HPLC', 'triplicate', 'data_type_flag']]"]
 -------------------
 
