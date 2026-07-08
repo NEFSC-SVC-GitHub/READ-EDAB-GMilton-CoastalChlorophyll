@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -667,14 +667,28 @@ document.write(`
 <span class="g g-Whitespace">    </span><span class="mi">990</span>     <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
 <span class="g g-Whitespace">    </span><span class="mi">991</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_readbuffer</span> <span class="o">=</span> <span class="n">data</span>
 
-<span class="nn">File ~\AppData\Local\anaconda3\Lib\zipfile\__init__.py:1065,</span> in <span class="ni">ZipExtFile._read1</span><span class="nt">(self, n)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1063</span> <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">_compress_type</span> <span class="o">==</span> <span class="n">ZIP_DEFLATED</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1064</span>     <span class="n">n</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">MIN_READ_SIZE</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1065</span>     <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_decompressor</span><span class="o">.</span><span class="n">decompress</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1066</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_eof</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_decompressor</span><span class="o">.</span><span class="n">eof</span> <span class="ow">or</span>
-<span class="g g-Whitespace">   </span><span class="mi">1067</span>                  <span class="bp">self</span><span class="o">.</span><span class="n">_compress_left</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="ow">and</span>
-<span class="g g-Whitespace">   </span><span class="mi">1068</span>                  <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_decompressor</span><span class="o">.</span><span class="n">unconsumed_tail</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1069</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_eof</span><span class="p">:</span>
+<span class="nn">File ~\AppData\Local\anaconda3\Lib\zipfile\__init__.py:1057,</span> in <span class="ni">ZipExtFile._read1</span><span class="nt">(self, n)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1055</span>     <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_decompressor</span><span class="o">.</span><span class="n">unconsumed_tail</span>
+<span class="g g-Whitespace">   </span><span class="mi">1056</span>     <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">1057</span>         <span class="n">data</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read2</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+<span class="g g-Whitespace">   </span><span class="mi">1058</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1059</span>     <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read2</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+
+<span class="nn">File ~\AppData\Local\anaconda3\Lib\zipfile\__init__.py:1089,</span> in <span class="ni">ZipExtFile._read2</span><span class="nt">(self, n)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1086</span> <span class="n">n</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">MIN_READ_SIZE</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1087</span> <span class="n">n</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_compress_left</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1089</span> <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fileobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1090</span> <span class="bp">self</span><span class="o">.</span><span class="n">_compress_left</span> <span class="o">-=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1091</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">data</span><span class="p">:</span>
+
+<span class="nn">File ~\AppData\Local\anaconda3\Lib\zipfile\__init__.py:808,</span> in <span class="ni">_SharedFile.read</span><span class="nt">(self, n)</span>
+<span class="g g-Whitespace">    </span><span class="mi">804</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Can&#39;t read from the ZIP file while there &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">805</span>             <span class="s2">&quot;is an open writing handle on it. &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">806</span>             <span class="s2">&quot;Close the writing handle before trying to read.&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">807</span> <span class="bp">self</span><span class="o">.</span><span class="n">_file</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pos</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">808</span> <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_file</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">809</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pos</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_file</span><span class="o">.</span><span class="n">tell</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">810</span> <span class="k">return</span> <span class="n">data</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
