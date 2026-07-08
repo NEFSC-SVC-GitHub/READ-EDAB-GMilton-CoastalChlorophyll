@@ -1,20 +1,20 @@
 Traceback (most recent call last):
-  File "C:\Users\gianna.milton\AppData\Local\anaconda3\Lib\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
     executenb(
-  File "C:\Users\gianna.milton\AppData\Local\anaconda3\Lib\site-packages\nbclient\client.py", line 1305, in execute
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/nbclient/client.py", line 1305, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\gianna.milton\AppData\Local\anaconda3\Lib\site-packages\jupyter_core\utils\__init__.py", line 165, in wrapped
+  File "/home/codespace/.local/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
     return loop.run_until_complete(inner)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\gianna.milton\AppData\Local\anaconda3\Lib\asyncio\base_events.py", line 687, in run_until_complete
+  File "/usr/local/python/3.12.1/lib/python3.12/asyncio/base_events.py", line 684, in run_until_complete
     return future.result()
            ^^^^^^^^^^^^^^^
-  File "C:\Users\gianna.milton\AppData\Local\anaconda3\Lib\site-packages\nbclient\client.py", line 705, in async_execute
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/nbclient/client.py", line 705, in async_execute
     await self.async_execute_cell(
-  File "C:\Users\gianna.milton\AppData\Local\anaconda3\Lib\site-packages\nbclient\client.py", line 1058, in async_execute_cell
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/nbclient/client.py", line 1058, in async_execute_cell
     await self._check_raise_for_error(cell, cell_index, exec_reply)
-  File "C:\Users\gianna.milton\AppData\Local\anaconda3\Lib\site-packages\nbclient\client.py", line 914, in _check_raise_for_error
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/nbclient/client.py", line 914, in _check_raise_for_error
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
@@ -135,13 +135,13 @@ bco1=pd.concat(dfs1).reset_index(drop=True)
 ------------------
 
 
-[1;31m---------------------------------------------------------------------------[0m
-[1;31mNameError[0m                                 Traceback (most recent call last)
-Cell [1;32mIn[1], line 2[0m
-[0;32m      1[0m url[38;5;241m=[39m[38;5;124m'[39m[38;5;124mhttps://erddap.bco-dmo.org/erddap/tabledap/bcodmo_dataset_816216.nc?Station[39m[38;5;124m%[39m[38;5;124m2Ctime[39m[38;5;124m%[39m[38;5;124m2Clatitude[39m[38;5;124m%[39m[38;5;124m2Clongitude[39m[38;5;124m%[39m[38;5;124m2Cdepth[39m[38;5;124m%[39m[38;5;124m2CChl_a&Bottom_Depth[39m[38;5;124m%[39m[38;5;124m3C=100[39m[38;5;124m'[39m
-[1;32m----> 2[0m url [38;5;241m=[39m requests[38;5;241m.[39mget(url, verify[38;5;241m=[39m[38;5;28;01mFalse[39;00m)[38;5;241m.[39mcontent
-[0;32m      3[0m da [38;5;241m=[39m xr[38;5;241m.[39mopen_dataset(url)
-[0;32m      4[0m da1[38;5;241m=[39m da[38;5;241m.[39mto_dataframe()
+[31m---------------------------------------------------------------------------[39m
+[31mNameError[39m                                 Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[1][39m[32m, line 2[39m
+[32m      1[39m url=[33m'[39m[33mhttps://erddap.bco-dmo.org/erddap/tabledap/bcodmo_dataset_816216.nc?Station[39m[33m%[39m[33m2Ctime[39m[33m%[39m[33m2Clatitude[39m[33m%[39m[33m2Clongitude[39m[33m%[39m[33m2Cdepth[39m[33m%[39m[33m2CChl_a&Bottom_Depth[39m[33m%[39m[33m3C=100[39m[33m'[39m
+[32m----> [39m[32m2[39m url = [43mrequests[49m.get(url, verify=[38;5;28;01mFalse[39;00m).content
+[32m      3[39m da = xr.open_dataset(url)
+[32m      4[39m da1= da.to_dataframe()
 
-[1;31mNameError[0m: name 'requests' is not defined
+[31mNameError[39m: name 'requests' is not defined
 
