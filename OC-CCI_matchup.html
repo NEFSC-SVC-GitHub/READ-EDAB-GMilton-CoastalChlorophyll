@@ -1,0 +1,1536 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Matchup to OC-CCI &#8212; Coastal Chlorophyll Book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=1ae7504c"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'OC-CCI_matchup';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Final variable appending and organization" href="final_dataset.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Coastal Chlorophyll Book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Coastal Chlorophyll Book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="chl_data.html">Chlorophyll data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="seabass_chl.html">SeaBASS data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="calcofi_chl.html">CalCOFI data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HOTS_chl.html">HOTS Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seamap_chl.html">SEAMAP data</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="ioos_chl.html">IOOS Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cioos_chl.html">CIOOS data</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="wod_chl.html">WOD data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bcodmo_chl.html">BCO-DMO data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aquamatch_chl.html">Aquamatch Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pan-Arctic_chl.html">Pan-Arctic data</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="globec_chl.html">GLOBEC data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gloria_chl.html">GLORIA data</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="final_concatination_chl.html">Chlorophyll Final Concatination</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Reflectance_data.html">Reflectance data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="seabass_rrs.html">SeaBASS data</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="gloria_rrs.html">GLORIA RRS data</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="final_concatination_rrs.html">RRS Final Concatination</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="cdom_data.html">CDOM data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="seabass_cdom.html">SeaBASS Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ioos_cdom.html">IOOS data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bcodmo_cdom.html">BCO-DMO data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="final_concatination_cdom.html">CDOM Final Concatination</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="final_dataset.html">Final variable appending and organization</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Matchup to OC-CCI</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/NEFSC/READ-EDAB-GMilton-CoastalChlorophyll" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NEFSC/READ-EDAB-GMilton-CoastalChlorophyll/issues/new?title=Issue%20on%20page%20%2FOC-CCI_matchup.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/OC-CCI_matchup.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Matchup to OC-CCI</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-match-insitu-chlorophyll-to-oc-cci-chlorophyll">First, match insitu chlorophyll to OC-CCI chlorophyll</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-chlorophyll-matchups">Run the Chlorophyll matchups</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-matchup-the-matched-dataset-to-owt-dataset">Next, matchup the matched dataset to OWT dataset</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="matchup-to-oc-cci">
+<h1>Matchup to OC-CCI<a class="headerlink" href="#matchup-to-oc-cci" title="Link to this heading">#</a></h1>
+<p>The completed chlorophyll dataset is next matched to the Ocean Colour Climate Change Initiative (OC-CCI) chlorophyll data, with 4km spatial resolution, and Optical Water Types (OWTs) derived from the OC-CCI Rrs data (wavelengths = 412, 443, 490, 510, 560, 665). Due to the size of the in situ dataframe and the size of the satellite data, many steps had to be taken to easy the data processing. This includes subsetting the satellite data to only North American regions, only pulling relevant dates, and processing the matchup one year at a time.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span><span class="n">date</span><span class="p">,</span> <span class="n">timedelta</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">SettingWithCopyWarning</span><span class="p">)</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="ne">FutureWarning</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">radians</span><span class="p">,</span> <span class="n">sin</span><span class="p">,</span> <span class="n">cos</span><span class="p">,</span> <span class="n">sqrt</span><span class="p">,</span> <span class="n">atan2</span>
+<span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span> 
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="first-match-insitu-chlorophyll-to-oc-cci-chlorophyll">
+<h2>First, match insitu chlorophyll to OC-CCI chlorophyll<a class="headerlink" href="#first-match-insitu-chlorophyll-to-oc-cci-chlorophyll" title="Link to this heading">#</a></h2>
+<p>The function, “haversine_distance_vectorized” is used to calculate the distance between and in situ coordinate and a satellite coordinate to ensure the matchups are reasonably far apart (6km in this case).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">haversine_distance_vectorized</span><span class="p">(</span><span class="n">lat1</span><span class="p">,</span> <span class="n">lon1</span><span class="p">,</span> <span class="n">lat2</span><span class="p">,</span> <span class="n">lon2</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculate the haversine distance between two sets of points in a vectorized way.</span>
+<span class="sd">    Parameters:</span>
+<span class="sd">        lat1, lon1: Latitude and longitude of the first set of points</span>
+<span class="sd">        lat2, lon2: Latitude and longitude of the second set of points </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        Array of distances in kilometers.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">R</span> <span class="o">=</span> <span class="mi">6371</span>  <span class="c1">#radius of earth</span>
+    <span class="c1">#convert latitude and longitude from degrees to radians</span>
+    <span class="n">lat1_rad</span><span class="p">,</span> <span class="n">lon1_rad</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">lat1</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">lon1</span><span class="p">)</span>
+    <span class="n">lat2_rad</span><span class="p">,</span> <span class="n">lon2_rad</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">lat2</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">lon2</span><span class="p">)</span>
+
+    <span class="c1">#calculate differences in coordinates</span>
+    <span class="n">dlon</span> <span class="o">=</span> <span class="n">lon2_rad</span> <span class="o">-</span> <span class="n">lon1_rad</span>
+    <span class="n">dlat</span> <span class="o">=</span> <span class="n">lat2_rad</span> <span class="o">-</span> <span class="n">lat1_rad</span>
+
+    <span class="c1">#haversine formula</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">dlat</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">lat1_rad</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">lat2_rad</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">dlon</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">a</span><span class="p">))</span>
+    <span class="n">distance</span> <span class="o">=</span> <span class="n">R</span> <span class="o">*</span> <span class="n">c</span>
+    <span class="k">return</span> <span class="n">distance</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The “slice_before_concat” function is used to subset the satellite xarrays from global to the North American region.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">slice_before_concat</span><span class="p">(</span><span class="n">ds</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Slices the xarray dataset to keep only a specific lat/lon range instead of loading in global data</span>
+<span class="sd">        NOTE: &#39;lat&#39; and &#39;lon&#39; here need to have same naming convention as the satellite nc file</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lat</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span><span class="n">lon</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="o">-</span><span class="mi">179</span><span class="p">,</span><span class="o">-</span><span class="mi">40</span><span class="p">))</span> <span class="c1">#slice xarray within these lat and lon bounds </span>
+        <span class="k">return</span> <span class="n">ds</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The “insitu_year” function is used to reduce the in situ dataframe to a given year, and to pull the specific dates to only gather relevant satellite files. We subset the in situ dataframe to a year to aid in processing power as matching the whole dataframe at once was too memory intensive.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">insitu_year</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="n">year</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; </span>
+<span class="sd">    Takes a dataframe and given year, returns dataframe with only data from that year and list of YYYmmdd times to pull xarray file names </span>
+<span class="sd">    df = in situ dataframe, with datetime column</span>
+<span class="sd">    year = desired year</span>
+<span class="sd">    returns:</span>
+<span class="sd">    filtered_df= in situ dataframe subset to the given year</span>
+<span class="sd">    dates = list of unique dates in format YYYYmmdd</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">year</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">year</span><span class="p">)</span> <span class="c1">#ensure year is string</span>
+    <span class="n">start_date</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">year</span><span class="o">+</span><span class="s1">&#39;-01-01 00:00:00&#39;</span><span class="p">)</span> <span class="c1">#jan 1st of year</span>
+    <span class="n">end_date</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">year</span><span class="o">+</span><span class="s1">&#39;-12-31 23:59:59&#39;</span><span class="p">)</span> <span class="c1">#dec 31st of year</span>
+    <span class="n">filtered_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">between</span><span class="p">(</span><span class="n">start_date</span><span class="p">,</span><span class="n">end_date</span><span class="p">)]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1">#only pull between these dates from df</span>
+    <span class="n">unique_dates</span><span class="o">=</span><span class="n">filtered_df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">unique_dates</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">unique_dates</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">date</span> <span class="c1">#create column of just dates without times</span>
+    <span class="n">unique_dates</span> <span class="o">=</span> <span class="n">unique_dates</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">],</span> <span class="n">keep</span><span class="o">=</span><span class="s1">&#39;first&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span> <span class="c1">#find all unique dates and turn to str</span>
+    <span class="n">unique_dates</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">unique_dates</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="c1">#take out all - </span>
+    <span class="n">dates</span> <span class="o">=</span> <span class="n">unique_dates</span><span class="o">.</span><span class="n">date</span> <span class="c1">#return just the dates as an array </span>
+    <span class="k">return</span> <span class="n">filtered_df</span><span class="p">,</span> <span class="n">dates</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The function “sat_insit_match3” is used to match the satellite xarray to the in situ dataframe. The output of this function is a dataframe with the same in situ columns, but with additional satellite columns such as chl_occci (the OC-CCI chlorophyll value), matched_sat_time (the time of the satellite matchup), and matched_spatial_dist_km (the distance between the satellite point and the in situ point).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sat_insit_match3</span><span class="p">(</span><span class="n">sat_xr</span><span class="p">,</span> <span class="n">insit_df</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; takes a satellite xarray and a in situ dataframe and matches datapoinst with same lat/lon/datetime </span>
+<span class="sd">        sat_xr: satellite xarray subset to only unique dates from in situ dataframe</span>
+<span class="sd">        insit_df: in situ dataframe subset to specific year </span>
+<span class="sd">        return: insitu dataframe with additional colum for satellite matches </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">time_indexer</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">insit_df</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">],</span> <span class="n">dims</span><span class="o">=</span><span class="s1">&#39;point&#39;</span><span class="p">)</span> <span class="c1">#pull all the dates and turn into array</span>
+    <span class="n">lat_indexer</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">insit_df</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">],</span> <span class="n">dims</span><span class="o">=</span><span class="s1">&#39;point&#39;</span><span class="p">)</span> <span class="c1">#pull all lats and turn into an array</span>
+    <span class="n">lon_indexer</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">insit_df</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">],</span> <span class="n">dims</span><span class="o">=</span><span class="s1">&#39;point&#39;</span><span class="p">)</span> <span class="c1">#pull all lons and turn into an array </span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Finding nearest satellite points for all in-situ data at once...&quot;</span><span class="p">)</span>
+    <span class="c1">#use xarray.sel to gather the same lat, lon, and time points as the in situ dataset from the satellite data</span>
+    <span class="n">matched_sat_points</span> <span class="o">=</span> <span class="n">sat_xr</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">time_indexer</span><span class="p">,</span> <span class="n">lat</span><span class="o">=</span><span class="n">lat_indexer</span><span class="p">,</span><span class="n">lon</span><span class="o">=</span><span class="n">lon_indexer</span><span class="p">,</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Filtering matches based on spatial and temporal criteria...&quot;</span><span class="p">)</span>
+    <span class="c1">#calculate the distance in the matched sat point is from the in situ point.</span>
+    <span class="n">distances_km</span> <span class="o">=</span> <span class="n">haversine_distance_vectorized</span><span class="p">(</span> <span class="n">insit_df</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>  <span class="n">insit_df</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">matched_sat_points</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+                                                 <span class="n">matched_sat_points</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+
+    <span class="c1">#check if the match is on the exact same day.</span>
+    <span class="n">time_match_mask</span> <span class="o">=</span> <span class="n">insit_df</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">values</span> <span class="o">==</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">matched_sat_points</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span><span class="o">.</span><span class="n">date</span>
+
+    <span class="c1">#create mask that only retains data where the dates match. </span>
+    <span class="n">valid_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">time_match_mask</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Found </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">valid_indices</span><span class="p">)</span><span class="si">}</span><span class="s2"> valid matches out of </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">insit_df</span><span class="p">)</span><span class="si">}</span><span class="s2"> points. Now extracting 3x3 grids...&quot;</span><span class="p">)</span>
+    
+    <span class="c1">#initiate columns to put satellite information </span>
+    <span class="n">insit_df</span><span class="p">[</span><span class="s1">&#39;chl_occci&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+    <span class="n">insit_df</span><span class="p">[</span><span class="s1">&#39;matched_sat_time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">NaT</span>
+    <span class="n">insit_df</span><span class="p">[</span><span class="s1">&#39;matched_spatial_dist_km&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+
+    <span class="c1">#Gather surrounding 3x3 pixels and find the average </span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">valid_indices</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span> <span class="c1">#as long as there are points that pass the date mask</span>
+        <span class="n">sat_lat_coords</span> <span class="o">=</span> <span class="n">sat_xr</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span> <span class="c1">##grab the lat and lon points from WHOLE xarray</span>
+        <span class="n">sat_lon_coords</span> <span class="o">=</span> <span class="n">sat_xr</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+
+        <span class="c1">#loop ONLY over the valid matches to extract the 3x3 grid.</span>
+        <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">valid_indices</span><span class="p">:</span> 
+            <span class="c1">#get the coordinates of the valid matched satellite point.</span>
+            <span class="n">matched_lat</span> <span class="o">=</span> <span class="n">matched_sat_points</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+            <span class="n">matched_lon</span> <span class="o">=</span> <span class="n">matched_sat_points</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+            <span class="n">matched_time</span> <span class="o">=</span> <span class="n">matched_sat_points</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+
+            <span class="c1">#using the coordinates from the valid matches, gather the index value that matches to the whole xarray</span>
+            <span class="n">lat_idx</span> <span class="o">=</span> <span class="n">sat_xr</span><span class="o">.</span><span class="n">indexes</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">matched_lat</span><span class="p">)</span>
+            <span class="n">lon_idx</span> <span class="o">=</span> <span class="n">sat_xr</span><span class="o">.</span><span class="n">indexes</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">matched_lon</span><span class="p">)</span>
+            <span class="n">time_idx</span> <span class="o">=</span> <span class="n">sat_xr</span><span class="o">.</span><span class="n">indexes</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">matched_time</span><span class="p">)</span>
+
+            <span class="c1">#gather slice information the surrounding lat and lon pixels </span>
+            <span class="n">lat_slice</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">lat_idx</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span> <span class="nb">min</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sat_lat_coords</span><span class="p">),</span> <span class="n">lat_idx</span> <span class="o">+</span> <span class="mi">2</span><span class="p">))</span>
+            <span class="n">lon_slice</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">lon_idx</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span> <span class="nb">min</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sat_lon_coords</span><span class="p">),</span> <span class="n">lon_idx</span> <span class="o">+</span> <span class="mi">2</span><span class="p">))</span>
+            
+            <span class="c1">#extract the 3x3 grid using isel.</span>
+            <span class="n">grid_data</span> <span class="o">=</span> <span class="n">sat_xr</span><span class="p">[</span><span class="s1">&#39;chlor_a&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">time_idx</span><span class="p">,</span> <span class="n">lat</span><span class="o">=</span><span class="n">lat_slice</span><span class="p">,</span> <span class="n">lon</span><span class="o">=</span><span class="n">lon_slice</span><span class="p">)</span> <span class="c1">#gather the chlorophyll data from surrounding pixels</span>
+            <span class="n">grid_values</span> <span class="o">=</span> <span class="n">grid_data</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span> <span class="c1">#flatten array</span>
+            
+            <span class="c1">#calculate the mean of the grid</span>
+            <span class="n">valid_grid_values</span> <span class="o">=</span> <span class="n">grid_values</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">grid_values</span><span class="p">)]</span> <span class="c1">#remove any nans from the array</span>
+            <span class="n">grid_mean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">valid_grid_values</span><span class="p">)</span> <span class="k">if</span> <span class="n">valid_grid_values</span><span class="o">.</span><span class="n">size</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span> <span class="c1">#as long as the array has a value, find the mean, else set as nan</span>
+
+            <span class="c1">#store the results in the DataFrame.</span>
+            <span class="n">insit_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="s1">&#39;chl_occci&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">grid_mean</span>
+            <span class="n">insit_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="s1">&#39;matched_sat_time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">matched_time</span>
+            <span class="n">insit_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="s1">&#39;matched_spatial_dist_km&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">distances_km</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Finished matching process!&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">insit_df</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The “insit_match” function takes the chlorophyll dataframe and a given year and subsets the in situ dataframe and satellite xarray to given dates in the year, creates a single satllite xarray, and runs all the above functions to return the final matched dataframe for a given year.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">insit_match</span><span class="p">(</span><span class="n">insitu_df</span><span class="p">,</span><span class="n">year</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    code to gather and concat all xarray files with matching dates to the in situ dataset and subset to north america</span>
+<span class="sd">    input: </span>
+<span class="sd">        insitu_df: dataframe with datetime, lat, lon, and variable</span>
+<span class="sd">        year: the specific year to subset the dataframe to </span>
+<span class="sd">    returns:</span>
+<span class="sd">        matched_chl:dataframe subset to that specific year with matched OC-CCI chlorophyll</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="c1">#first, use the function insitu_year to subset the in situ dataframe to specific year. this helps with processing</span>
+    <span class="n">insit_year</span><span class="p">,</span> <span class="n">dates_year</span><span class="o">=</span> <span class="n">insitu_year</span><span class="p">(</span><span class="n">insitu_df</span><span class="p">,</span><span class="n">year</span><span class="p">)</span>
+    
+    <span class="n">existing_files</span><span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">date</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">dates_year</span><span class="p">):</span> <span class="c1">#for each date that recorded data </span>
+        <span class="n">file_date</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;CHL\ESACCI-OC-L3S-CHLOR_A-MERGED-1D_DAILY_4km_GEO_PML_OCx-&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">date</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;-fv6.0.nc&#39;</span> <span class="c1">#load in the specific nc file name</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">file_date</span><span class="p">):</span> <span class="c1">#if the file exists, then add to a list of files</span>
+            <span class="n">existing_files</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">file_date</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Warning: File not found </span><span class="si">{</span><span class="n">date</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">file_date</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1">#else, skip </span>
+            
+<span class="c1">#If there are some issues with corrupted files, comment out the above block from &quot;existing_files&quot; to &quot;print&quot;, and uncomment the below block</span>
+    <span class="c1">#existing_files= []</span>
+    <span class="c1">#for date in sorted(dates_year):</span>
+    <span class="c1">#    file_date = r&#39;CHL\ESACCI-OC-L3S-CHLOR_A-MERGED-1D_DAILY_4km_GEO_PML_OCx-&#39;+str(date)+&#39;-fv6.0.nc&#39;</span>
+    <span class="c1">#    if os.path.exists(file_date): #if the file exists, try to open and load it in. </span>
+    <span class="c1">#        try:</span>
+    <span class="c1">#            temp_ds = xr.open_dataset(file_date, chunks={}) #open the file</span>
+     <span class="c1">#           _ = temp_ds[&#39;chlor_a&#39;].isel(time=0, latitude=0, longitude=0).compute() #load in the data instead of lazy load to make sure it exists.</span>
+     <span class="c1">#           temp_ds.close() #close the file</span>
+     <span class="c1">#           existing_files.append(file_date) #if it oppened, append to the list of files </span>
+     <span class="c1">#       except Exception as e: #if it didn&#39;t open, then skip. </span>
+     <span class="c1">#           print(f&quot;Skipping corrupted or unreadable file: {file_date}&quot;) #. Error: {e}</span>
+                <span class="c1">#temp_ds.close()</span>
+     <span class="c1">#   else:</span>
+     <span class="c1">#        print(f&quot;Warning: File not found for date {date}: {file_date}&quot;) #if the file name doesn&#39;t exist, skip </span>
+    
+    <span class="c1">#concat all satellite .nc files into single file       </span>
+    <span class="n">coastal_us_combo</span><span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_mfdataset</span><span class="p">(</span><span class="n">existing_files</span><span class="p">,</span> <span class="n">preprocess</span><span class="o">=</span><span class="n">slice_before_concat</span><span class="p">,</span><span class="n">combine</span><span class="o">=</span><span class="s1">&#39;by_coords&#39;</span><span class="p">)</span> <span class="c1">#open all files, concat into one subset to north america</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;satellite refiguring complete&#39;</span><span class="p">)</span> 
+    <span class="n">test_insitu</span> <span class="o">=</span> <span class="n">insit_year</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1">#subset dataframe to specific year, reset the index</span>
+    <span class="n">matched_chl</span> <span class="o">=</span> <span class="n">sat_insit_match3</span><span class="p">(</span><span class="n">coastal_us_combo</span><span class="p">,</span> <span class="n">test_insitu</span><span class="p">)</span> <span class="c1">#run the satellite matching function</span>
+    <span class="n">coastal_us_combo</span><span class="o">.</span><span class="n">close</span><span class="p">()</span> <span class="c1">#close the file</span>
+    <span class="k">return</span> <span class="n">matched_chl</span>  <span class="c1">#matched_chl = dataframe of in situ chlorophyll to OC-CCI chlorophyll </span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="run-the-chlorophyll-matchups">
+<h2>Run the Chlorophyll matchups<a class="headerlink" href="#run-the-chlorophyll-matchups" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chl_all</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Coastal_chl_final\all_chl.xlsx&quot;</span><span class="p">)</span> <span class="c1">#load in concatinated chlorophyll dataset.</span>
+<span class="n">chl_all</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">chl_all</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">)</span> <span class="c1">#ensure datetime is in pandas format </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">chl_all</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Coastal_chl_final\all_chl.xlsx&quot;</span><span class="p">)</span> <span class="c1">#load in concatinated chlorophyll dataset.</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">chl_all</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">chl_all</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">)</span>
+
+<span class="nn">File ~\AppData\Local\anaconda3\Lib\site-packages\pandas\io\excel\_base.py:495,</span> in <span class="ni">read_excel</span><span class="nt">(io, sheet_name, header, names, index_col, usecols, dtype, engine, converters, true_values, false_values, skiprows, nrows, na_values, keep_default_na, na_filter, verbose, parse_dates, date_parser, date_format, thousands, decimal, comment, skipfooter, storage_options, dtype_backend, engine_kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">493</span> <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">io</span><span class="p">,</span> <span class="n">ExcelFile</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">494</span>     <span class="n">should_close</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="ne">--&gt; </span><span class="mi">495</span>     <span class="n">io</span> <span class="o">=</span> <span class="n">ExcelFile</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">496</span>         <span class="n">io</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">497</span>         <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">498</span>         <span class="n">engine</span><span class="o">=</span><span class="n">engine</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">499</span>         <span class="n">engine_kwargs</span><span class="o">=</span><span class="n">engine_kwargs</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">500</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">501</span> <span class="k">elif</span> <span class="n">engine</span> <span class="ow">and</span> <span class="n">engine</span> <span class="o">!=</span> <span class="n">io</span><span class="o">.</span><span class="n">engine</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">502</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">503</span>         <span class="s2">&quot;Engine should not be specified when passing &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">504</span>         <span class="s2">&quot;an ExcelFile - ExcelFile already has the engine set&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">505</span>     <span class="p">)</span>
+
+<span class="nn">File ~\AppData\Local\anaconda3\Lib\site-packages\pandas\io\excel\_base.py:1550,</span> in <span class="ni">ExcelFile.__init__</span><span class="nt">(self, path_or_buffer, engine, storage_options, engine_kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1548</span>     <span class="n">ext</span> <span class="o">=</span> <span class="s2">&quot;xls&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1549</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1550</span>     <span class="n">ext</span> <span class="o">=</span> <span class="n">inspect_excel_format</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1551</span>         <span class="n">content_or_path</span><span class="o">=</span><span class="n">path_or_buffer</span><span class="p">,</span> <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span>
+<span class="g g-Whitespace">   </span><span class="mi">1552</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1553</span>     <span class="k">if</span> <span class="n">ext</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1554</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1555</span>             <span class="s2">&quot;Excel file format cannot be determined, you must specify &quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1556</span>             <span class="s2">&quot;an engine manually.&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1557</span>         <span class="p">)</span>
+
+<span class="nn">File ~\AppData\Local\anaconda3\Lib\site-packages\pandas\io\excel\_base.py:1402,</span> in <span class="ni">inspect_excel_format</span><span class="nt">(content_or_path, storage_options)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1399</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">content_or_path</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1400</span>     <span class="n">content_or_path</span> <span class="o">=</span> <span class="n">BytesIO</span><span class="p">(</span><span class="n">content_or_path</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1402</span> <span class="k">with</span> <span class="n">get_handle</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1403</span>     <span class="n">content_or_path</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">,</span> <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span> <span class="n">is_text</span><span class="o">=</span><span class="kc">False</span>
+<span class="g g-Whitespace">   </span><span class="mi">1404</span> <span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1405</span>     <span class="n">stream</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">handle</span>
+<span class="g g-Whitespace">   </span><span class="mi">1406</span>     <span class="n">stream</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="nn">File ~\AppData\Local\anaconda3\Lib\site-packages\pandas\io\common.py:882,</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">873</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">874</span>             <span class="n">handle</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">875</span>             <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">878</span>             <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">879</span>         <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">880</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">881</span>         <span class="c1"># Binary mode</span>
+<span class="ne">--&gt; </span><span class="mi">882</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">883</span>     <span class="n">handles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">handle</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">885</span> <span class="c1"># Convert BytesIO or file objects passed with an encoding</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;Coastal_chl_final\\all_chl.xlsx&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chl_test</span><span class="o">=</span><span class="n">chl_all</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">chl_all</span><span class="p">[</span><span class="s1">&#39;depth&#39;</span><span class="p">]</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">]</span>  <span class="c1">#since OC-CCI is sattellite data and only records 1 depth, reduce to just surface waters </span>
+<span class="c1">#next, since this dataset has flourecence along with extracted, only keep 1 datapoint per datetime, lat, and lon. </span>
+<span class="c1">#That way (as shown in next cell with variable &#39;a&#39;), large sample resolutions don&#39;t skew the dataset</span>
+<span class="n">chl_test</span><span class="o">=</span><span class="n">chl_test</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="s1">&#39;lon&#39;</span><span class="p">],</span> <span class="n">keep</span><span class="o">=</span><span class="s1">&#39;first&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> 
+<span class="c1">#keep the shallowest sample within the top 10 meters </span>
+
+<span class="c1">#run below code to see what years need to be run. </span>
+<span class="n">unique_dates</span><span class="o">=</span><span class="n">chl_test</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="c1">#copy dataframe to ensure no accidental changes happen to the original dataframe</span>
+<span class="n">unique_dates</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">unique_dates</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">date</span> <span class="c1">#create column of just date</span>
+<span class="n">unique_dates</span> <span class="o">=</span> <span class="n">unique_dates</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">],</span> <span class="n">keep</span><span class="o">=</span><span class="s1">&#39;first&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1">#find all unique dates and turn to str</span>
+<span class="n">unique_dates</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">unique_dates</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="c1">#take out all - </span>
+<span class="n">dates_year</span> <span class="o">=</span> <span class="n">unique_dates</span><span class="o">.</span><span class="n">date</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">chl_all</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;datetime&#39;</span><span class="p">,</span><span class="s1">&#39;lat&#39;</span><span class="p">,</span><span class="s1">&#39;lon&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;counts&#39;</span><span class="p">)</span> <span class="c1">#how many samples are recorded in each datetime, lat, and lon. </span>
+<span class="n">a</span><span class="o">.</span><span class="n">nlargest</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;counts&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>datetime</th>
+      <th>lat</th>
+      <th>lon</th>
+      <th>counts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>8721</th>
+      <td>2001-04-10 12:34:00</td>
+      <td>35.20177</td>
+      <td>-76.24203</td>
+      <td>315</td>
+    </tr>
+    <tr>
+      <th>26707</th>
+      <td>2003-04-30 00:51:58</td>
+      <td>34.15600</td>
+      <td>-119.94900</td>
+      <td>300</td>
+    </tr>
+    <tr>
+      <th>32321</th>
+      <td>2003-09-11 03:07:41</td>
+      <td>34.29800</td>
+      <td>-119.88500</td>
+      <td>300</td>
+    </tr>
+    <tr>
+      <th>34475</th>
+      <td>2003-11-05 05:08:44</td>
+      <td>34.34300</td>
+      <td>-119.86500</td>
+      <td>300</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>As mentioned above, the matchup process is done in parts (years) to aid in processing</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chl_2000</span> <span class="o">=</span><span class="n">insit_match</span><span class="p">(</span><span class="n">chl_test</span><span class="p">,</span><span class="mi">2000</span><span class="p">)</span> <span class="c1">#run insit_match to the chlorophyll data, subset to 2000. repeat for all years</span>
+<span class="n">chl_2000</span> <span class="o">=</span> <span class="n">chl_2000</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chl_occci&#39;</span><span class="p">])</span> <span class="c1">#remove any empty OC-CCI matches, since we only want datapoints that correspond.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chl_2001</span> <span class="o">=</span><span class="n">insit_match</span><span class="p">(</span><span class="n">chl_test</span><span class="p">,</span><span class="mi">2001</span><span class="p">)</span>
+<span class="n">chl_2001</span> <span class="o">=</span> <span class="n">chl_2001</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chl_occci&#39;</span><span class="p">])</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chl_2002</span> <span class="o">=</span><span class="n">insit_match</span><span class="p">(</span><span class="n">chl_test</span><span class="p">,</span><span class="mi">2002</span><span class="p">)</span>
+<span class="n">chl_2002</span> <span class="o">=</span> <span class="n">chl_2002</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chl_occci&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chl_2003</span> <span class="o">=</span><span class="n">insit_match</span><span class="p">(</span><span class="n">chl_test</span><span class="p">,</span><span class="mi">2003</span><span class="p">)</span>
+<span class="n">chl_2003</span> <span class="o">=</span> <span class="n">chl_2003</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chl_occci&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chl_2004</span> <span class="o">=</span><span class="n">insit_match</span><span class="p">(</span><span class="n">chl_test</span><span class="p">,</span><span class="mi">2004</span><span class="p">)</span>
+<span class="n">chl_2004</span> <span class="o">=</span> <span class="n">chl_2004</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chl_occci&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chl_2005</span> <span class="o">=</span><span class="n">insit_match</span><span class="p">(</span><span class="n">chl_test</span><span class="p">,</span><span class="mi">2005</span><span class="p">)</span>
+<span class="n">chl_2005</span> <span class="o">=</span> <span class="n">chl_2005</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chl_occci&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chl_2006</span> <span class="o">=</span><span class="n">insit_match</span><span class="p">(</span><span class="n">chl_test</span><span class="p">,</span><span class="mi">2006</span><span class="p">)</span>
+<span class="n">chl_2006</span> <span class="o">=</span> <span class="n">chl_2006</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chl_occci&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chl_2007</span> <span class="o">=</span><span class="n">insit_match</span><span class="p">(</span><span class="n">chl_test</span><span class="p">,</span><span class="mi">2007</span><span class="p">)</span>
+<span class="n">chl_2007</span> <span class="o">=</span> <span class="n">chl_2007</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chl_occci&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chl_2008</span> <span class="o">=</span><span class="n">insit_match</span><span class="p">(</span><span class="n">chl_test</span><span class="p">,</span><span class="mi">2008</span><span class="p">)</span>
+<span class="n">chl_2008</span> <span class="o">=</span> <span class="n">chl_2008</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chl_occci&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chl_2009</span> <span class="o">=</span><span class="n">insit_match</span><span class="p">(</span><span class="n">chl_test</span><span class="p">,</span><span class="mi">2009</span><span class="p">)</span>
+<span class="n">chl_2009</span> <span class="o">=</span> <span class="n">chl_2009</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chl_occci&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chl_2010</span> <span class="o">=</span><span class="n">insit_match</span><span class="p">(</span><span class="n">chl_test</span><span class="p">,</span><span class="mi">2010</span><span class="p">)</span>
+<span class="n">chl_2010</span> <span class="o">=</span> <span class="n">chl_2010</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chl_occci&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chl_2011</span> <span class="o">=</span><span class="n">insit_match</span><span class="p">(</span><span class="n">chl_test</span><span class="p">,</span><span class="mi">2011</span><span class="p">)</span>
+<span class="n">chl_2011</span> <span class="o">=</span> <span class="n">chl_2011</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chl_occci&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chl_2012</span> <span class="o">=</span><span class="n">insit_match</span><span class="p">(</span><span class="n">chl_test</span><span class="p">,</span><span class="mi">2012</span><span class="p">)</span>
+<span class="n">chl_2012</span> <span class="o">=</span> <span class="n">chl_2012</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chl_occci&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chl_2013</span> <span class="o">=</span><span class="n">insit_match</span><span class="p">(</span><span class="n">chl_test</span><span class="p">,</span><span class="mi">2013</span><span class="p">)</span>
+<span class="n">chl_20103</span> <span class="o">=</span> <span class="n">chl_2013</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chl_occci&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chl_2014</span> <span class="o">=</span><span class="n">insit_match</span><span class="p">(</span><span class="n">chl_test</span><span class="p">,</span><span class="mi">2014</span><span class="p">)</span>
+<span class="n">chl_2014</span> <span class="o">=</span> <span class="n">chl_2014</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chl_occci&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chl_2015</span> <span class="o">=</span><span class="n">insit_match</span><span class="p">(</span><span class="n">chl_test</span><span class="p">,</span><span class="mi">2015</span><span class="p">)</span>
+<span class="n">chl_2015</span> <span class="o">=</span> <span class="n">chl_2015</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chl_occci&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chl_2016</span> <span class="o">=</span><span class="n">insit_match</span><span class="p">(</span><span class="n">chl_test</span><span class="p">,</span><span class="mi">2016</span><span class="p">)</span>
+<span class="n">chl_2016</span> <span class="o">=</span> <span class="n">chl_2016</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chl_occci&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chl_2017</span> <span class="o">=</span><span class="n">insit_match</span><span class="p">(</span><span class="n">chl_test</span><span class="p">,</span><span class="mi">2017</span><span class="p">)</span>
+<span class="n">chl_2017</span> <span class="o">=</span> <span class="n">chl_2017</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chl_occci&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chl_2018</span> <span class="o">=</span><span class="n">insit_match</span><span class="p">(</span><span class="n">chl_test</span><span class="p">,</span><span class="mi">2018</span><span class="p">)</span>
+<span class="n">chl_2018</span> <span class="o">=</span> <span class="n">chl_2018</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chl_occci&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chl_2019</span> <span class="o">=</span><span class="n">insit_match</span><span class="p">(</span><span class="n">chl_test</span><span class="p">,</span><span class="mi">2019</span><span class="p">)</span>
+<span class="n">chl_2019</span> <span class="o">=</span> <span class="n">chl_2019</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chl_occci&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chl_2020</span> <span class="o">=</span><span class="n">insit_match</span><span class="p">(</span><span class="n">chl_test</span><span class="p">,</span><span class="mi">2020</span><span class="p">)</span>
+<span class="n">chl_2020</span> <span class="o">=</span> <span class="n">chl_2020</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chl_occci&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chl_2021</span> <span class="o">=</span><span class="n">insit_match</span><span class="p">(</span><span class="n">chl_test</span><span class="p">,</span><span class="mi">2021</span><span class="p">)</span>
+<span class="n">chl_2021</span> <span class="o">=</span> <span class="n">chl_2021</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chl_occci&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chl_2022</span> <span class="o">=</span><span class="n">insit_match</span><span class="p">(</span><span class="n">chl_test</span><span class="p">,</span><span class="mi">2022</span><span class="p">)</span>
+<span class="n">chl_2022</span> <span class="o">=</span> <span class="n">chl_2022</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chl_occci&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chl_2023</span> <span class="o">=</span><span class="n">insit_match</span><span class="p">(</span><span class="n">chl_test</span><span class="p">,</span><span class="mi">2023</span><span class="p">)</span>
+<span class="n">chl_2023</span> <span class="o">=</span> <span class="n">chl_2023</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chl_occci&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chl_2024</span> <span class="o">=</span><span class="n">insit_match</span><span class="p">(</span><span class="n">chl_test</span><span class="p">,</span><span class="mi">2024</span><span class="p">)</span>
+<span class="n">chl_2024</span> <span class="o">=</span> <span class="n">chl_2024</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chl_occci&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chl_2025</span> <span class="o">=</span><span class="n">insit_match</span><span class="p">(</span><span class="n">chl_test</span><span class="p">,</span><span class="mi">2025</span><span class="p">)</span>
+<span class="n">chl_2025</span> <span class="o">=</span> <span class="n">chl_2025</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chl_occci&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#since this dataset takes so long to run, everytime a year is matched added it to the existing matchups and save </span>
+<span class="n">current_matchup</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;sat_matchupCHL2.xlsx&#39;</span><span class="p">)</span>  <span class="c1">#load in current matchup</span>
+<span class="n">dfs</span><span class="o">=</span><span class="p">[</span><span class="n">current_matchup</span><span class="p">,</span><span class="n">chl_2025</span><span class="p">]</span> <span class="c1">#append the dataframe to the existing matched dataframe </span>
+<span class="n">matched_all</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">dfs</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">matched_all</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">&quot;sat_matchupCHL2.xlsx&quot;</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="c1">#export dataframe </span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="next-matchup-the-matched-dataset-to-owt-dataset">
+<h2>Next, matchup the matched dataset to OWT dataset<a class="headerlink" href="#next-matchup-the-matched-dataset-to-owt-dataset" title="Link to this heading">#</a></h2>
+<p>OWT .nc files were already created from the OC-CCI Rrs data. Some matchup functions can be reused from the chlorophyll matchup, but some have to be slightly tweaked to accuratly matchup the dataset. First, “slice_before_concat” needs to switch from lat and lon to latitude and longitude to match the xarray variable names.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">slice_before_concat</span><span class="p">(</span><span class="n">ds</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Slices the xarray dataset to keep only a specific lat/lon range instead of loading in global data</span>
+<span class="sd">        NOTE: &#39;lat&#39; and &#39;lon&#39; here need to have same naming convention as the satellite nc file</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">latitude</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span><span class="n">longitude</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="o">-</span><span class="mi">179</span><span class="p">,</span><span class="o">-</span><span class="mi">40</span><span class="p">))</span> <span class="c1">#slice xarray within these lat and lon bounds </span>
+        <span class="k">return</span> <span class="n">ds</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Additionally, “sat_insit_match3” needs to be tweaked to retain OWT matchups, not chlorophyll matchups. It returns the matched dataframe along with columns ‘owt’ (mode of the surrounding 3x3 pixels) and ‘all_classes’ (array of all OWTs in grid). This functions finds the mode of the surrounding 3x3 pixels rather than the mean. So for example, if the 3x3 grid looks like:</p>
+<p><img alt="owt_grid" src="_images/OWT_grid.png" /></p>
+<p>then the owt = 12 and the all_classes = [10.0, 12.0, 12.0, 10.0, 12.0, 12.0, 9.0, 12.0, 12.0]</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sat_insit_match3</span><span class="p">(</span><span class="n">sat_xr</span><span class="p">,</span> <span class="n">insit_df</span><span class="p">,</span> <span class="n">spatial_diff_km</span><span class="p">,</span><span class="n">variable</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; takes a satellite xarray and a in situ dataframe and finds datapoints with same lat/lon/datetime withing bounds</span>
+<span class="sd">        sat_xr: satellite satellite xarray subset to only unique dates from in situ dataframe</span>
+<span class="sd">        insit_df: in situ dataframe subset to specific year </span>
+<span class="sd">        spatial_diff_km: spatial boundary for matching in km</span>
+<span class="sd">        var: satellite variable name to match</span>
+<span class="sd">        return: insitu dataframe with additional colum for satellite matches </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="c1">#First make sure the in situ dataset has the right datetime format </span>
+    <span class="n">insit_df</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">insit_df</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+    <span class="n">insit_df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1">#remove any empty datetime rows</span>
+    <span class="n">insit_df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1">#remove rows without complete coordinates</span>
+    <span class="n">insit_df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    
+    <span class="n">time_indexer</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">insit_df</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">],</span> <span class="n">dims</span><span class="o">=</span><span class="s1">&#39;point&#39;</span><span class="p">)</span> <span class="c1">#pull all the dates and turn into array</span>
+    <span class="n">lat_indexer</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">insit_df</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">],</span> <span class="n">dims</span><span class="o">=</span><span class="s1">&#39;point&#39;</span><span class="p">)</span> <span class="c1">#pull all lats and turn into an array</span>
+    <span class="n">lon_indexer</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">insit_df</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">],</span> <span class="n">dims</span><span class="o">=</span><span class="s1">&#39;point&#39;</span><span class="p">)</span> <span class="c1">#pull all lons and turn into an array </span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Finding nearest satellite points for all in-situ data at once...&quot;</span><span class="p">)</span>
+    <span class="c1">#use xarray.sel to gather the same lat, lon, and time points as the in situ dataset from the satellite data</span>
+    <span class="n">matched_sat_points</span> <span class="o">=</span> <span class="n">sat_xr</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">time_indexer</span><span class="p">,</span> <span class="n">latitude</span><span class="o">=</span><span class="n">lat_indexer</span><span class="p">,</span><span class="n">longitude</span><span class="o">=</span><span class="n">lon_indexer</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Filtering matches based on spatial and temporal criteria...&quot;</span><span class="p">)</span>
+    <span class="c1">#calculate the distance in the matched sat point is from the in situ point.</span>
+    <span class="n">distances_km</span> <span class="o">=</span> <span class="n">haversine_distance_vectorized</span><span class="p">(</span><span class="n">insit_df</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">insit_df</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">matched_sat_points</span><span class="p">[</span><span class="s1">&#39;latitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+                                                <span class="n">matched_sat_points</span><span class="p">[</span><span class="s1">&#39;longitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+
+    <span class="c1">#check if the match is on the exact same day.</span>
+    <span class="n">time_match_mask</span> <span class="o">=</span> <span class="n">insit_df</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">values</span> <span class="o">==</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">matched_sat_points</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span><span class="o">.</span><span class="n">date</span>
+    
+    <span class="c1">#check if the match is within 6km of the in situ coordinates </span>
+    <span class="n">spatial_match_mask</span> <span class="o">=</span> <span class="n">distances_km</span> <span class="o">&lt;=</span> <span class="n">spatial_diff_km</span>
+
+    <span class="c1">#combine the two checks to create a mask where the dates match and within 6kms</span>
+    <span class="n">valid_match_mask</span> <span class="o">=</span> <span class="n">time_match_mask</span> <span class="o">&amp;</span> <span class="n">spatial_match_mask</span>
+
+    <span class="c1">#initiate columns to put satellite information </span>
+    <span class="n">insit_df</span><span class="p">[</span><span class="s1">&#39;owt&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+    <span class="n">insit_df</span><span class="p">[</span><span class="s1">&#39;all_classes&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+    <span class="n">insit_df</span><span class="p">[</span><span class="s1">&#39;all_classes&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">insit_df</span><span class="p">[</span><span class="s1">&#39;all_classes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">object</span><span class="p">)</span>
+
+    <span class="c1">#create mask that only retains data where the dates match. </span>
+    <span class="n">valid_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">valid_match_mask</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Found </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">valid_indices</span><span class="p">)</span><span class="si">}</span><span class="s2"> valid matches out of </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">insit_df</span><span class="p">)</span><span class="si">}</span><span class="s2"> points. Now extracting 3x3 grids...&quot;</span><span class="p">)</span>
+    
+    <span class="c1">#Gather surrounding 3x3 pixels and find the mode </span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">valid_indices</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span> <span class="c1">#as long as there are points that pass the date mask</span>
+        <span class="n">sat_lat_coords</span> <span class="o">=</span> <span class="n">sat_xr</span><span class="p">[</span><span class="s1">&#39;latitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span> <span class="c1">#grab the lat and lon points from WHOLE xarray</span>
+        <span class="n">sat_lon_coords</span> <span class="o">=</span> <span class="n">sat_xr</span><span class="p">[</span><span class="s1">&#39;longitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+
+        <span class="c1">#loop ONLY over the valid matches to extract the 3x3 grid.</span>
+        <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">valid_indices</span><span class="p">:</span>
+            <span class="c1">#get the coordinates of the valid matched satellite point.</span>
+            <span class="n">matched_lat</span> <span class="o">=</span> <span class="n">matched_sat_points</span><span class="p">[</span><span class="s1">&#39;latitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+            <span class="n">matched_lon</span> <span class="o">=</span> <span class="n">matched_sat_points</span><span class="p">[</span><span class="s1">&#39;longitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+            <span class="n">matched_time</span> <span class="o">=</span> <span class="n">matched_sat_points</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+
+            <span class="c1">#using the coordinates from the valid matches, gather the index value that matches to the whole xarray</span>
+            <span class="n">lat_idx</span> <span class="o">=</span> <span class="n">sat_xr</span><span class="o">.</span><span class="n">indexes</span><span class="p">[</span><span class="s1">&#39;latitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">matched_lat</span><span class="p">)</span>
+            <span class="n">lon_idx</span> <span class="o">=</span> <span class="n">sat_xr</span><span class="o">.</span><span class="n">indexes</span><span class="p">[</span><span class="s1">&#39;longitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">matched_lon</span><span class="p">)</span>
+            <span class="n">time_idx</span> <span class="o">=</span> <span class="n">sat_xr</span><span class="o">.</span><span class="n">indexes</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">matched_time</span><span class="p">)</span>
+
+            <span class="c1">#gather slice information the surrounding lat and lon pixels </span>
+            <span class="n">lat_slice</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">lat_idx</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span> <span class="nb">min</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sat_lat_coords</span><span class="p">),</span> <span class="n">lat_idx</span> <span class="o">+</span> <span class="mi">2</span><span class="p">))</span>
+            <span class="n">lon_slice</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">lon_idx</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span> <span class="nb">min</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sat_lon_coords</span><span class="p">),</span> <span class="n">lon_idx</span> <span class="o">+</span> <span class="mi">2</span><span class="p">))</span>
+            
+            <span class="c1">#extract the 3x3 grid using isel.</span>
+            <span class="n">grid_data</span> <span class="o">=</span> <span class="n">sat_xr</span><span class="p">[</span><span class="n">variable</span><span class="p">]</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">time_idx</span><span class="p">,</span> <span class="n">latitude</span><span class="o">=</span><span class="n">lat_slice</span><span class="p">,</span> <span class="n">longitude</span><span class="o">=</span><span class="n">lon_slice</span><span class="p">)</span> <span class="c1">#gather the OWT data from surrounding pixels</span>
+            <span class="n">grid_values</span> <span class="o">=</span> <span class="n">grid_data</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span> <span class="c1">#flatten array</span>
+            
+            <span class="c1">#calculate the mode, ignoring NaN values.</span>
+            <span class="n">valid_grid_values</span> <span class="o">=</span> <span class="n">grid_values</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">grid_values</span><span class="p">)]</span> <span class="c1">#remove any nans from the array</span>
+            <span class="n">grid_mode</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">valid_grid_values</span><span class="p">)</span><span class="o">.</span><span class="n">mode</span> <span class="k">if</span> <span class="n">valid_grid_values</span><span class="o">.</span><span class="n">size</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span> <span class="c1">#as long as the array has a value, find the mode, else set as nan</span>
+
+            <span class="c1">#store the results in the DataFrame.</span>
+            <span class="n">insit_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="s1">&#39;owt&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">grid_mode</span>
+            <span class="n">insit_df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="s1">&#39;all_classes&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">grid_values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Finished matching process!&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">insit_df</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We’ll also slightly alter the final matchup function to grab OWT file names.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">owt_insit_match</span><span class="p">(</span><span class="n">insitu_df</span><span class="p">,</span> <span class="n">sat_xr</span><span class="p">,</span> <span class="n">spatial_res</span><span class="p">,</span> <span class="n">variable</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    code that produces dataframe of matching satellite points and insitu points.</span>
+<span class="sd">    input: insitu_df: dataframe with datetime, lat, lon, and variables</span>
+<span class="sd">        sat_xr: folder string to satellite data files</span>
+<span class="sd">        spatial_res: resolution boundry for matching (km)</span>
+<span class="sd">        variable: the variable being matched (OWT)</span>
+<span class="sd">        year: the year in situ and sat data are being compared (int)</span>
+<span class="sd">    returns:</span>
+<span class="sd">        in situ dataframe with matched datasets subset to the given year </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="c1">#first, reduce insitu_df to only stated year </span>
+    <span class="n">insit_year</span><span class="p">,</span> <span class="n">dates_year</span><span class="o">=</span> <span class="n">insitu_year</span><span class="p">(</span><span class="n">insitu_df</span><span class="p">,</span><span class="n">year</span><span class="p">)</span>
+
+    <span class="c1">#next, pull xarray files that match to the dates of the insit_year</span>
+    <span class="n">existing_files</span><span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">date</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">dates_year</span><span class="p">):</span>
+        <span class="n">file_date</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">sat_xr</span><span class="p">)</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">date</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;-OCCCI-V6.0-GLOBAL_MAPPED-OWC_WEI.nc&#39;</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">file_date</span><span class="p">):</span>
+            <span class="n">existing_files</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">file_date</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Warning: File not found for date </span><span class="si">{</span><span class="n">date</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">file_date</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            
+    <span class="c1">## NOTE: uncomment below if you&#39;re getting errors about corrupted files. THis code will open each file to ensure there&#39;s actual data inside</span>
+    <span class="c1"># existing_files= []</span>
+    <span class="c1"># var = &#39;water_class&#39;</span>
+    <span class="c1"># for date in sorted(dates_year):</span>
+    <span class="c1">#    file_date = str(sat_xr)+str(date)+&#39;-OCCCI-V6.0-GLOBAL_MAPPED-OWC_WEI.nc&#39;</span>
+    <span class="c1">#    if os.path.exists(file_date): #if path exists, try to open it</span>
+    <span class="c1">#        try:</span>
+    <span class="c1">#            temp_ds = xr.open_dataset(file_date, chunks={}) # Use chunks={} for Dask if needed</span>
+    <span class="c1">#            _ = temp_ds[var].isel(time=0, latitude=0, longitude=0).compute()</span>
+    <span class="c1">#            temp_ds.close()</span>
+    <span class="c1">#           existing_files.append(file_date)</span>
+    <span class="c1">#        except Exception as e:</span>
+    <span class="c1">#            print(f&quot;Skipping corrupted or unreadable file: {file_date}&quot;) #. Error: {e}</span>
+                <span class="c1">#temp_ds.close()</span>
+    <span class="c1">#    else:</span>
+    <span class="c1">#         print(f&quot;Warning: File not found for date {date}: {file_date}&quot;)</span>
+
+    
+    <span class="c1">#concat all satellite .nc files into 1 single xarray file       </span>
+    <span class="n">coastal_us_combo</span><span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_mfdataset</span><span class="p">(</span><span class="n">existing_files</span><span class="p">,</span> <span class="n">preprocess</span><span class="o">=</span><span class="n">slice_before_concat</span><span class="p">,</span><span class="n">combine</span><span class="o">=</span><span class="s1">&#39;by_coords&#39;</span><span class="p">)</span> <span class="c1">#open all files, concat into one subset to north america</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;satellite refiguring complete&#39;</span><span class="p">)</span>
+    <span class="n">test_insitu</span> <span class="o">=</span> <span class="n">insit_year</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">matched_chl</span> <span class="o">=</span> <span class="n">sat_insit_match3</span><span class="p">(</span><span class="n">coastal_us_combo</span><span class="p">,</span> <span class="n">test_insitu</span><span class="p">,</span> <span class="n">spatial_res</span><span class="p">,</span><span class="n">variable</span><span class="p">)</span> <span class="c1">#run the satellite matching function</span>
+    <span class="k">return</span> <span class="n">matched_chl</span>  <span class="c1">#matched_chl = dataframe of in situ chlorophyll to OC-CCI OWT </span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#load in all the data with the sattellite matchups </span>
+<span class="n">chl_all</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Coastal_chl_final\sat_matchupCHL2.xlsx&quot;</span><span class="p">)</span>
+<span class="n">chl_all</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">chl_all</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">],</span><span class="nb">format</span><span class="o">=</span><span class="s1">&#39;mixed&#39;</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#all reducing already done in first round of matchups </span>
+<span class="n">insit_chl_coast2</span> <span class="o">=</span> <span class="n">chl_all</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">test</span><span class="o">=</span> <span class="n">insit_chl_coast2</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span>
+<span class="n">test</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#to match, run matching code for each year</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_matched2000</span> <span class="o">=</span> <span class="n">owt_insit_match</span><span class="p">(</span><span class="n">insit_chl_coast2</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;OWC_WEI\D_&#39;</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;water_class&#39;</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_matched2001</span> <span class="o">=</span> <span class="n">owt_insit_match</span><span class="p">(</span><span class="n">insit_chl_coast2</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;OWC_WEI\D_&#39;</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;water_class&#39;</span><span class="p">,</span> <span class="mi">2001</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_matched2002</span> <span class="o">=</span> <span class="n">owt_insit_match</span><span class="p">(</span><span class="n">insit_chl_coast2</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;OWC_WEI\D_&#39;</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;water_class&#39;</span><span class="p">,</span> <span class="mi">2002</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_matched2003</span> <span class="o">=</span> <span class="n">owt_insit_match</span><span class="p">(</span><span class="n">insit_chl_coast2</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;OWC_WEI\D_&#39;</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;water_class&#39;</span><span class="p">,</span> <span class="mi">2003</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_matched2004</span> <span class="o">=</span> <span class="n">owt_insit_match</span><span class="p">(</span><span class="n">insit_chl_coast2</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;OWC_WEI\D_&#39;</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;water_class&#39;</span><span class="p">,</span> <span class="mi">2004</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_matched2005</span> <span class="o">=</span> <span class="n">owt_insit_match</span><span class="p">(</span><span class="n">insit_chl_coast2</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;OWC_WEI\D_&#39;</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;water_class&#39;</span><span class="p">,</span> <span class="mi">2005</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_matched2006</span> <span class="o">=</span> <span class="n">owt_insit_match</span><span class="p">(</span><span class="n">insit_chl_coast2</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;OWC_WEI\D_&#39;</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;water_class&#39;</span><span class="p">,</span> <span class="mi">2006</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_matched2007</span> <span class="o">=</span> <span class="n">owt_insit_match</span><span class="p">(</span><span class="n">insit_chl_coast2</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;OWC_WEI\D_&#39;</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;water_class&#39;</span><span class="p">,</span> <span class="mi">2007</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_matched2008</span> <span class="o">=</span> <span class="n">owt_insit_match</span><span class="p">(</span><span class="n">insit_chl_coast2</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;OWC_WEI\D_&#39;</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;water_class&#39;</span><span class="p">,</span> <span class="mi">2008</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_matched2009</span> <span class="o">=</span> <span class="n">owt_insit_match</span><span class="p">(</span><span class="n">insit_chl_coast2</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;OWC_WEI\D_&#39;</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;water_class&#39;</span><span class="p">,</span> <span class="mi">2009</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_matched2010</span> <span class="o">=</span> <span class="n">owt_insit_match</span><span class="p">(</span><span class="n">insit_chl_coast2</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;OWC_WEI\D_&#39;</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;water_class&#39;</span><span class="p">,</span> <span class="mi">2010</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_matched2011</span> <span class="o">=</span> <span class="n">owt_insit_match</span><span class="p">(</span><span class="n">insit_chl_coast2</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;OWC_WEI\D_&#39;</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;water_class&#39;</span><span class="p">,</span> <span class="mi">2011</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_matched2012</span> <span class="o">=</span> <span class="n">owt_insit_match</span><span class="p">(</span><span class="n">insit_chl_coast2</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;OWC_WEI\D_&#39;</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;water_class&#39;</span><span class="p">,</span> <span class="mi">2012</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_matched2013</span> <span class="o">=</span> <span class="n">owt_insit_match</span><span class="p">(</span><span class="n">insit_chl_coast2</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;OWC_WEI\D_&#39;</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;water_class&#39;</span><span class="p">,</span> <span class="mi">2013</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_matched2014</span> <span class="o">=</span> <span class="n">owt_insit_match</span><span class="p">(</span><span class="n">insit_chl_coast2</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;OWC_WEI\D_&#39;</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;water_class&#39;</span><span class="p">,</span> <span class="mi">2014</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_matched2015</span> <span class="o">=</span> <span class="n">owt_insit_match</span><span class="p">(</span><span class="n">insit_chl_coast2</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;OWC_WEI\D_&#39;</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;water_class&#39;</span><span class="p">,</span> <span class="mi">2015</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_matched2016</span> <span class="o">=</span> <span class="n">owt_insit_match</span><span class="p">(</span><span class="n">insit_chl_coast2</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;OWC_WEI\D_&#39;</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;water_class&#39;</span><span class="p">,</span> <span class="mi">2016</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_matched2017</span> <span class="o">=</span> <span class="n">owt_insit_match</span><span class="p">(</span><span class="n">insit_chl_coast2</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;OWC_WEI\D_&#39;</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;water_class&#39;</span><span class="p">,</span> <span class="mi">2017</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_matched2018</span> <span class="o">=</span> <span class="n">owt_insit_match</span><span class="p">(</span><span class="n">insit_chl_coast2</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;OWC_WEI\D_&#39;</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;water_class&#39;</span><span class="p">,</span> <span class="mi">2018</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_matched2019</span> <span class="o">=</span> <span class="n">owt_insit_match</span><span class="p">(</span><span class="n">insit_chl_coast2</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;OWC_WEI\D_&#39;</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;water_class&#39;</span><span class="p">,</span> <span class="mi">2019</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_matched2020</span> <span class="o">=</span> <span class="n">owt_insit_match</span><span class="p">(</span><span class="n">insit_chl_coast2</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;OWC_WEI\D_&#39;</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;water_class&#39;</span><span class="p">,</span> <span class="mi">2020</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_matched2021</span> <span class="o">=</span> <span class="n">owt_insit_match</span><span class="p">(</span><span class="n">insit_chl_coast2</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;OWC_WEI\D_&#39;</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;water_class&#39;</span><span class="p">,</span> <span class="mi">2021</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_matched2022</span> <span class="o">=</span> <span class="n">owt_insit_match</span><span class="p">(</span><span class="n">insit_chl_coast2</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;OWC_WEI\D_&#39;</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;water_class&#39;</span><span class="p">,</span> <span class="mi">2022</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_matched2023</span> <span class="o">=</span> <span class="n">owt_insit_match</span><span class="p">(</span><span class="n">insit_chl_coast2</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;OWC_WEI\D_&#39;</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;water_class&#39;</span><span class="p">,</span> <span class="mi">2023</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_matched2024</span> <span class="o">=</span> <span class="n">owt_insit_match</span><span class="p">(</span><span class="n">insit_chl_coast2</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;OWC_WEI\D_&#39;</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;water_class&#39;</span><span class="p">,</span> <span class="mi">2024</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_matched2025</span> <span class="o">=</span> <span class="n">owt_insit_match</span><span class="p">(</span><span class="n">insit_chl_coast2</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;OWC_WEI\D_&#39;</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;water_class&#39;</span><span class="p">,</span> <span class="mi">2025</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">current_matchup</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Coastal_chl_final\owt_allchlV3.xlsx&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span><span class="o">=</span><span class="p">[</span><span class="n">current_matchup</span><span class="p">,</span><span class="n">df_matched2023</span><span class="p">]</span> 
+<span class="n">matched_all</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">dfs</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">matched_all</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">&quot;owt_allchlV3.xlsx&quot;</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="final_dataset.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Final variable appending and organization</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-match-insitu-chlorophyll-to-oc-cci-chlorophyll">First, match insitu chlorophyll to OC-CCI chlorophyll</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-chlorophyll-matchups">Run the Chlorophyll matchups</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-matchup-the-matched-dataset-to-owt-dataset">Next, matchup the matched dataset to OWT dataset</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Gianna Milton
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

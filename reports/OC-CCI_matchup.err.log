@@ -18,28 +18,16 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-Calcofi_btl = pd.read_excel(r'CalCOFI_Database_194903-202105_csv_16October2023\194903-202105_Bottle.xlsx')#chl files
-Calcofi_btl = Calcofi_btl[['Cst_Cnt','Sta_ID', 'Depthm',  'ChlorA', 'Chlqua','R_Depth']] #reduce to only needed columns
-
-#since bottle data has no datetime, lat, or lon, need to load in CalCOFI meta data and match up to bottle data
-Calcofi_cast = pd.read_excel(r'CalCOFI_Database_194903-202105_csv_16October2023\194903-202105_Cast.xlsx')
-Calcofi_cast = Calcofi_cast[['Cst_Cnt', 'Cruise', 'Sta_ID', 'Sta_Code', 'Date', 'Time', 'Lat_Dec', 'Lon_Dec', 'Data_Type']]
-
-#create datetime column
-Calcofi_cast['Date'] = Calcofi_cast['Date'].astype(str)
-Calcofi_cast['Time'] = Calcofi_cast['Time'].astype(str)
-Calcofi_cast['Date'] = Calcofi_cast['Date'].str.slice(0, 10)  # Keeps only 'YYYY-MM-DD'
-datetime_str = Calcofi_cast['Date'] + ' ' + Calcofi_cast['Time']
-Calcofi_cast['datetime'] = pd.to_datetime(datetime_str, errors='coerce')
+chl_all = pd.read_excel(r"Coastal_chl_final\all_chl.xlsx") #load in concatinated chlorophyll dataset.
+chl_all['datetime'] = chl_all['datetime'].apply(pd.to_datetime) #ensure datetime is in pandas format 
 ------------------
 
 
 [1;31m---------------------------------------------------------------------------[0m
 [1;31mFileNotFoundError[0m                         Traceback (most recent call last)
-Cell [1;32mIn[2], line 1[0m
-[1;32m----> 1[0m Calcofi_btl [38;5;241m=[39m pd[38;5;241m.[39mread_excel([38;5;124mr[39m[38;5;124m'[39m[38;5;124mCalCOFI_Database_194903-202105_csv_16October2023[39m[38;5;124m\[39m[38;5;124m194903-202105_Bottle.xlsx[39m[38;5;124m'[39m)[38;5;66;03m#chl files[39;00m
-[0;32m      2[0m Calcofi_btl [38;5;241m=[39m Calcofi_btl[[[38;5;124m'[39m[38;5;124mCst_Cnt[39m[38;5;124m'[39m,[38;5;124m'[39m[38;5;124mSta_ID[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mDepthm[39m[38;5;124m'[39m,  [38;5;124m'[39m[38;5;124mChlorA[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mChlqua[39m[38;5;124m'[39m,[38;5;124m'[39m[38;5;124mR_Depth[39m[38;5;124m'[39m]] [38;5;66;03m#reduce to only needed columns[39;00m
-[0;32m      4[0m [38;5;66;03m#since bottle data has no datetime, lat, or lon, need to load in CalCOFI meta data and match up to bottle data[39;00m
+Cell [1;32mIn[7], line 1[0m
+[1;32m----> 1[0m chl_all [38;5;241m=[39m pd[38;5;241m.[39mread_excel([38;5;124mr[39m[38;5;124m"[39m[38;5;124mCoastal_chl_final[39m[38;5;124m\[39m[38;5;124mall_chl.xlsx[39m[38;5;124m"[39m) [38;5;66;03m#load in concatinated chlorophyll dataset.[39;00m
+[0;32m      2[0m chl_all[[38;5;124m'[39m[38;5;124mdatetime[39m[38;5;124m'[39m] [38;5;241m=[39m chl_all[[38;5;124m'[39m[38;5;124mdatetime[39m[38;5;124m'[39m][38;5;241m.[39mapply(pd[38;5;241m.[39mto_datetime)
 
 File [1;32m~\AppData\Local\anaconda3\Lib\site-packages\pandas\io\excel\_base.py:495[0m, in [0;36mread_excel[1;34m(io, sheet_name, header, names, index_col, usecols, dtype, engine, converters, true_values, false_values, skiprows, nrows, na_values, keep_default_na, na_filter, verbose, parse_dates, date_parser, date_format, thousands, decimal, comment, skipfooter, storage_options, dtype_backend, engine_kwargs)[0m
 [0;32m    493[0m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m [38;5;28misinstance[39m(io, ExcelFile):
@@ -90,5 +78,5 @@ File [1;32m~\AppData\Local\anaconda3\Lib\site-packages\pandas\io\common.py:882
 [0;32m    883[0m     handles[38;5;241m.[39mappend(handle)
 [0;32m    885[0m [38;5;66;03m# Convert BytesIO or file objects passed with an encoding[39;00m
 
-[1;31mFileNotFoundError[0m: [Errno 2] No such file or directory: 'CalCOFI_Database_194903-202105_csv_16October2023\\194903-202105_Bottle.xlsx'
+[1;31mFileNotFoundError[0m: [Errno 2] No such file or directory: 'Coastal_chl_final\\all_chl.xlsx'
 
